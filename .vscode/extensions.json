@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "aaron-bond.better-comments",
+        "dart-code.dart-code",
+        "dart-code.flutter",
+        "kisstkondoros.vscode-gutter-preview",
+        "sonarsource.sonarlint-vscode",
+        "streetsidesoftware.code-spell-checker-spanish",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens",
+    ]
+}
