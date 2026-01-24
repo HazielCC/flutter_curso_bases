@@ -7,7 +7,22 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Screen')),
-      body: const Center(child: Text('Welcome to the Home Screen!')),
+      body: Center(
+        child: Column(
+          children: [
+            Text(
+              'Welcome to the Home Screen',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+            ElevatedButton(
+              onPressed: () {
+                // Acción al presionar el botón
+              },
+              child: const Text('Press Me'),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
