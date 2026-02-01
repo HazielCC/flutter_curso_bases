@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_curso_bases/screens/home_screen.dart';
+import 'package:flutter_curso_bases/screens/counter_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 103, 58, 183),
         ),
       ),
-      home: const Home(),
+      home: const CounterScreen(),
       debugShowCheckedModeBanner: false,
     );
   }
