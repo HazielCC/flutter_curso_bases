@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
           seedColor: const Color.fromARGB(255, 103, 58, 183),
         ),
       ),
-      home: const CounterScreen(),
+      home: const CounterScreen(counter: 0),
       debugShowCheckedModeBanner: false,
     );
   }
