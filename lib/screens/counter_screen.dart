@@ -19,14 +19,14 @@ class _CounterScreenState extends State<CounterScreen> {
   void initState() {
     super.initState();
     _counter = widget.counter;
-    logger.i('CounterScreen initialized with counter: $_counter');
+    logger.i('CounterScreen inicializado con contador: $_counter');
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter Screen'),
+        title: Text('Pantalla de contador'),
         backgroundColor: Color.fromARGB(255, 54, 175, 245),
       ),
       body: Center(
@@ -36,7 +36,7 @@ class _CounterScreenState extends State<CounterScreen> {
             // * Mostrar el valor actual del contador
             Text('$_counter', style: TextStyle(fontSize: 40), softWrap: true),
             Text(
-              'You have pushed the button this many times:',
+              'Has presionado el botón tantas veces:',
               style: Theme.of(context).textTheme.bodyMedium,
             ),
 
@@ -51,22 +51,22 @@ class _CounterScreenState extends State<CounterScreen> {
                   onPressed: () {
                     setState(() {
                       _counter--;
-                      logger.i('Counter decremented to $_counter');
+                      logger.i('Contador disminuido a $_counter');
                     });
                   },
 
-                  child: const Text('Decrement'),
+                  child: const Text('decremento'),
                 ),
                 const SizedBox(width: 20),
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
                       _counter++;
-                      logger.i('Counter incremented to $_counter');
+                      logger.i('Contador incrementado a $_counter');
                     });
                   },
 
-                  child: const Text('Increment'),
+                  child: const Text('incremento'),
                 ),
               ],
             ),
