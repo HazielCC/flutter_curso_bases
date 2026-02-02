@@ -27,25 +27,51 @@ class _CounterScreenState extends State<CounterScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Counter Screen'),
-        backgroundColor: Color.fromARGB(255, 103, 58, 183),
+        backgroundColor: Color.fromARGB(255, 54, 175, 245),
       ),
       body: Center(
-        child: Text(
-          '$_counter',
-          style: TextStyle(fontSize: 40),
-          softWrap: true,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // * Mostrar el valor actual del contador
+            Text('$_counter', style: TextStyle(fontSize: 40), softWrap: true),
+            Text(
+              'You have pushed the button this many times:',
+              style: Theme.of(context).textTheme.bodyMedium,
+            ),
+
+            // * Separador
+            const SizedBox(height: 20),
+
+            // * Botones para incrementar y decrementar el contador
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      _counter--;
+                      logger.i('Counter decremented to $_counter');
+                    });
+                  },
+
+                  child: const Text('Decrement'),
+                ),
+                const SizedBox(width: 20),
+                ElevatedButton(
+                  onPressed: () {
+                    setState(() {
+                      _counter++;
+                      logger.i('Counter incremented to $_counter');
+                    });
+                  },
+
+                  child: const Text('Increment'),
+                ),
+              ],
+            ),
+          ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          setState(() {
-            _counter++;
-            logger.i('Counter incremented to $_counter');
-          });
-        },
-        tooltip: 'Soy un botón',
-        mini: true,
-        child: Icon(Icons.add),
       ),
     );
   }
