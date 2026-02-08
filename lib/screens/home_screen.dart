@@ -10,12 +10,26 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Screen')),
-      body: ListTile(
-        title: const Text('Ir a Counter Screen'),
-        onTap: () {
-          logger.d('Navegando a Counter Screen');
-          Navigator.pushNamed(context, '/counter');
-        },
+      body: ListView(
+        children: [
+          ListTile(
+            title: const Text('Ir a Counter Screen'),
+            onTap: () {
+              logger.d('Navegando a Counter Screen');
+              Navigator.pushNamed(context, '/counter');
+            },
+          ),
+
+          SizedBox(height: 10),
+
+          ListTile(
+            title: const Text('Ir a News Screen'),
+            onTap: () {
+              logger.d('Navegando a News Screen');
+              Navigator.pushNamed(context, '/news');
+            },
+          ),
+        ],
       ),
     );
   }
