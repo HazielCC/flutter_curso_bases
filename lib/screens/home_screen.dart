@@ -10,34 +10,12 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Home Screen')),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Welcome to the Home Screen',
-              style: Theme.of(context).textTheme.bodyMedium,
-            ),
-            ElevatedButton(
-              onPressed: () {
-                logger.d('[ElevatedButton] Button Pressed');
-              },
-              style: ButtonStyle(
-                textStyle: WidgetStateProperty.all(
-                  const TextStyle(fontSize: 18),
-                ),
-              ),
-              child: const Text('Press Me'),
-            ),
-          ],
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          logger.d('[FloatingActionButton] Button Pressed');
+      body: ListTile(
+        title: const Text('Ir a Counter Screen'),
+        onTap: () {
+          logger.d('Navegando a Counter Screen');
+          Navigator.pushNamed(context, '/counter');
         },
-        tooltip: "Soy un botón flotante",
-        child: const Icon(Icons.add),
       ),
     );
   }
