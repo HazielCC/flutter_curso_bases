@@ -37,6 +37,14 @@ class Home extends StatelessWidget {
               Navigator.pushNamed(context, '/faker');
             },
           ),
+
+          ListTile(
+            title: const Text('Ir a Perfil Screen'),
+            onTap: () {
+              logger.d('Navegando a Perfil Screen');
+              Navigator.pushNamed(context, '/perfil');
+            },
+          ),
         ],
       ),
     );
