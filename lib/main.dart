@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_curso_bases/screens/counter/counter_screen.dart';
 import 'package:flutter_curso_bases/screens/faker/faker_screen.dart';
 import 'package:flutter_curso_bases/screens/home_screen.dart';
+import 'package:flutter_curso_bases/screens/news/news_screen.dart';
 import 'package:flutter_curso_bases/screens/perfil/perfil.dart';
 
 void main() {
@@ -26,7 +27,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const Home(),
         '/counter': (context) => const CounterScreen(counter: 0),
-        // '/news': (context) => const NewsScreen(),
+        '/news': (context) => const NewsScreen(),
         '/faker': (context) => const FakerScreen(),
         '/perfil': (context) => const PerfilScreen(),
       },
