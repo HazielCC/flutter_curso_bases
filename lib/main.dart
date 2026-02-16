@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_curso_bases/screens/counter/counter_screen.dart';
 import 'package:flutter_curso_bases/screens/faker/faker_screen.dart';
 import 'package:flutter_curso_bases/screens/home_screen.dart';
+import 'package:flutter_curso_bases/screens/inputs/textfields.dart';
 import 'package:flutter_curso_bases/screens/news/news_screen.dart';
 import 'package:flutter_curso_bases/screens/perfil/perfil.dart';
 
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/news': (context) => const NewsScreen(),
         '/faker': (context) => const FakerScreen(),
         '/perfil': (context) => const PerfilScreen(),
+        '/inputs': (context) => const Inputs(),
       },
       debugShowCheckedModeBanner: false,
     );

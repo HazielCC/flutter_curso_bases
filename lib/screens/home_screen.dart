@@ -45,6 +45,14 @@ class Home extends StatelessWidget {
               Navigator.pushNamed(context, '/perfil');
             },
           ),
+
+          ListTile(
+            title: const Text('Ir a Inputs Screen'),
+            onTap: () {
+              logger.d('Navegando a Inputs Screen');
+              Navigator.pushNamed(context, '/inputs');
+            },
+          ),
         ],
       ),
     );
